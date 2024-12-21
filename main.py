@@ -50,7 +50,7 @@ def count_characters(text):
 # def generate_report(dict):
 #
 #     # convert in to list of dicts
-#     list_of_word_dict = [] 
+#     list_of_word_dict = []
 #     for char in dict:
 #         if char.isalpha():
 #             list_of_word_dict.append({char: dict[char]})
@@ -65,16 +65,19 @@ def count_characters(text):
 #         for key in list_dict:
 #             print(f"The '{key}' character was found {list_dict[key]} times")
 
+
 def sort_on(dict):
     return dict["num"]
+
 
 def dict_to_dict_list(dict):
     list_of_dict = []
     for char in dict:
         if char.isalpha():
-            list_of_dict.append({"char": char, "num" : dict[char]})
+            list_of_dict.append({"char": char, "num": dict[char]})
     list_of_dict.sort(reverse=True, key=sort_on)
     return list_of_dict
+
 
 def generate_report(dict):
     list_of_dicts = dict_to_dict_list(dict)
